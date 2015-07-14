@@ -1,0 +1,9 @@
+# Usefull links
+http://www.resistorguide.com/pull-up-resistor_pull-down-resistor/
+
+MCU 	Voltage 	Frequency 	Flash 	SRAM 	EEPROM
+
+ATtiny85 	2.7-5.5V 	0-20Mhz 	8K 	512 bytes 	512 bytes
+
+
+
