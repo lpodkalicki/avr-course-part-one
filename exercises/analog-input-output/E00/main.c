@@ -8,6 +8,7 @@
  * 5) connect potentiometer PIN1 to attiny-board's VCC
  * 6) connect potentiometer PIN1 to attiny-board's PB2 (it is ADC1)
  * 7) connect potentiometer PIN3 to attiny-board's GND
+ * 8) set registers DDRB (I/O selection) and PORTB (High/Low selection) - configure PB2 as OUTPUT with LOW state
  */
 
 #include <avr/io.h>
@@ -20,14 +21,14 @@ main(void)
 {
 	uint8_t i;
 
-	/* --- Setup --- */
+	/* --- setup --- */
 
-	DDRB = 0b00000001;
+	DDRB = 0b00000000;
 	PORTB = 0b00000000;
 	TCCR0A = (1<<COM0A1)|(1<<WGM00); 	// Connect PWM to pin on timer 0 and channel A; set timer PWM mode
 	TCCR0B = 1<<CS01;			// Set prescaler to 8 (CLK/8)
 
-	/* --- Loop --- */
+	/* --- loop --- */
 
         while (1) {
 
