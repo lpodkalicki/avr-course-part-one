@@ -1,5 +1,5 @@
 /**
- * Chapter: USART
+ * Chapter: Serial Communication
  * Exercise E00:
  * 1) use usb2uart-device
  * 2) connect usb2uart-device's GND to attiny-board's GND

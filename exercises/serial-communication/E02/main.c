@@ -1,5 +1,5 @@
 /**
- * Chapter: USART
+ * Chapter: Serial Communication
  * Exercise E02:
  * 1) use usb2uart-device and rgb-leds-shield
  * 2) connect usb2uart-device's GND to attiny-board's GND
@@ -10,7 +10,7 @@
  * 7) connect rgb-leds-shield's LED_BLUE to attiny-board's PB2
  * 8) connect rgb-leds-shield's VCC to attiny-board's VCC
  * 9) set registers DDRB (I/O selection) and PORTB (High/Low selection) for LED_GREEN and LED_BLUE (note that LED_RED is already configured!)
- * 10) implement new commands hanlding to make this sketch work also for LED_GREEN ('G', 'g') and LED_BLUE ('B', 'b')
+ * 10) implement new commands hanldlers to make this sketch work also for LED_GREEN ('G', 'g') and LED_BLUE ('B', 'b')
  */
 
 #include <avr/io.h>
@@ -26,8 +26,12 @@ main(void)
 {
 	char command;
 
+	/* --- setup --- */
+
 	DDRB = 0b00000001;
 	PORTB = 0b00000001;
+
+	/* --- loop --- */
 
 	uart_puts("[ Exercise 02 ]\n");
 

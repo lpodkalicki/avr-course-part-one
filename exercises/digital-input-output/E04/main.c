@@ -20,16 +20,18 @@ int
 main(void)
 {
 
+	/* --- setup --- */
+
         DDRB = 0b00000000;
 	PORTB = 0b00000000;
 
+	/* --- loop --- */
+
         while (1) {
-		 // Light the LED
-                PORTB &= ~(1 << LED_RED);       // Clear bit
+                PORTB &= ~(1 << LED_RED);       // Turn LED on (clear bit)
 		_delay_ms(500);
 
-                // Turn off the LED
-                PORTB |= (1 << LED_RED);        // Set bit
+                PORTB |= (1 << LED_RED);        // Turn LED off (set bit)
 		_delay_ms(500);
 	}
 

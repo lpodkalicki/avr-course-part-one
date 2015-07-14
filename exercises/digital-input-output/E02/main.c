@@ -14,8 +14,12 @@ int
 main(void)
 {
 
-        DDRB = 0b00001111;
-	PORTB = 0b00001111;
+	/* --- setup --- */
+
+        DDRB = 0b00000000;
+	PORTB = 0b00000000;
+
+	/* --- loop --- */
 
         while (1);
 

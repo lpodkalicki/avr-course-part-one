@@ -59,12 +59,12 @@ main(void)
 {
 	uint16_t i = 0;
 
-	/* --- Setup --- */
+	/* --- setup --- */
 
         DDRB = 0b00000000;
 	PORTB = 0b00000000;
 
-	/* --- Loop --- */
+	/* --- loop --- */
 
         while (1) {
 

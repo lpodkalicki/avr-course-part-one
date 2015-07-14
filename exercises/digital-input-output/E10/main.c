@@ -1,6 +1,6 @@
 /**
  * Chapter: Digital I/0
- * Exercise E06 (based on E05):
+ * Exercise E10 (based on E09):
  * 1) use four-leds-shield and one switch
  * 2) connect four-leds-shield's GND to attiny-board's GND
  * 3) connect LED1 to PB0, LED2 to PB1, LED3 to PB2, LED4 to PB3
@@ -26,8 +26,12 @@ main(void)
 {
 	uint8_t mode = 0;
 
-        DDRB = 0b00001111;	// TODO: wyzerowac
-	PORTB = 0b00000000;	// TODO: to samo
+	/* --- setup --- */
+
+        DDRB = 0b00000000;
+	PORTB = 0b00000000;
+
+	/* --- loop --- */
 
         while (1) {
 
@@ -45,9 +49,9 @@ main(void)
 
 			mode = (mode + 1) % MODE_MAX;           // 0, 1, 2, ..., MODE_MAX - 1
 
-			_delay_ms(30);
-			//while((PINB & (1 << SWITCH)) > 0);
-			_delay_ms(30);
+			_delay_ms(30);				// pre-debonuce
+			while((PINB & (1 << SWITCH)) > 0);	// Wait for SWITCH release..
+			_delay_ms(30);				// post-debounce
 		}
 
 	}
