@@ -1,0 +1,13 @@
+- migające diody - mrygacz 1 (wersja z delay, wersja z watchdog'iem, wersja z timer'em)
+- dwie diody migające - mrygacz 2 (razem, na przemian, rozne wypelnienia)
+- pływające światło (w jednym kierunku, odbijające się)
+- sygnał karetki - na sygnale
+- losowanie - orzeł czy reszka
+- pulsująca dioda (wersja analogowa, wersja z delay, wersja z timer'em PWM)
+- włącz/wyłącz diodę - inteligentna latarka
+- Police lights - https://www.youtube.com/watch?v=4Sn6-SYm_SE
+- prosty generator dds 1 - 300Hz (potencjometr i dioda)
+- gra w kolory - RGB (miganie 3 diodami - regularnie, losowo)
+- tester refleksu (cztery diody, dwa przełączniki - tak, nie - czy suma oczek jest parzysta) 
+- licznik czasu modulo 15 (cztery diody - zliczanie czasu i binarna prezentacja, dwa przełączniki - stop, reset)
+

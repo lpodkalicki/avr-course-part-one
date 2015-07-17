@@ -3,7 +3,7 @@
 # Makfile for exercise.
 # --
 
-include ../exercise.in
+include ../../exercise.in
 
 EXERCISE_SRC = \
 	main.c 
