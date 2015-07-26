@@ -2,13 +2,9 @@
  * Chapter: Analog I/O
  * Exercise E00:
  * 1) rgb-leds-shield
- * 2) connect usb2uart-device's GND to attiny-board's GND
- * 3) connect usb2uart-device's RXD to attiny-board's PB3
- * 4) connect usb2uart-device's TXD to attiny-board's PB4
- * 5) connect potentiometer PIN1 to attiny-board's VCC
- * 6) connect potentiometer PIN1 to attiny-board's PB2 (it is ADC1)
- * 7) connect potentiometer PIN3 to attiny-board's GND
- * 8) set registers DDRB (I/O selection) and PORTB (High/Low selection) - configure PB2 as OUTPUT with LOW state
+ * 2) connect rgb-leds-shield's LED_GREEN to attiny-board's PB0
+ * 3) connect rgb-leds-shield's VCC to attiny-board's VCC
+ * 4) set registers DDRB (I/O selection) and PORTB (High/Low selection) - configure PB0 as OUTPUT with HIGH state
  */
 
 #include <avr/io.h>
